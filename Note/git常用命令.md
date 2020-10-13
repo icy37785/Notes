@@ -21,7 +21,7 @@ $ git remote add upstream [源项目 URL]
 $ git fetch upstream
 # 检查fork的本地 [main] 分支
 $ git checkout [main]
-# 切换到主分支
+# 将来自 upstream/main 的更改合并到本地 main 分支中。
 $ git merge upstream/main
 # 修改作者名
 $ git commit --amend --author='Author Name <email@address.com>'
