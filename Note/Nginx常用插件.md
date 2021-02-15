@@ -6,12 +6,18 @@
 
 > cd /root
 > git clone https://github.com/google/ngx_brotli
+>
+> cd ngx_brotli
+>
+> git submodule update --init
 
 ### ngx_cache_purge
 
 https://github.com/nginx-modules/ngx_cache_purge/releases 看最新版本号
 
-> https://github.com/nginx-modules/ngx_cache_purge/archive/2.5.1.tar.gz 
+> wget https://github.com/nginx-modules/ngx_cache_purge/archive/2.5.1.tar.gz 
+>
+> tar -zxvf 2.5.1.tar.gz
 
 
 

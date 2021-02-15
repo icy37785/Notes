@@ -131,3 +131,7 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 > /etc/init.d/mysql stop
 > rm -rf /usr/local/mysql
 > rm -f /etc/init.d/mysql
+
+### 减小 golang 编译出来的可执行文件大小
+
+> go build -i -ldflags="-s -w"
