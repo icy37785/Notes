@@ -1,5 +1,5 @@
 proxies:
-  - {name: 🎧 第一项有数值就可用, server: lolico.me, port: 443, type: http, country:us US, tls: false, skip-cert-verify: false}
+  - {name: 🎧 网易云音乐0, server: lolico.me, port: 443, type: http, country:us US, tls: false, skip-cert-verify: false}
   - {name: 🎧 网易云音乐1, server: lolico.me, port: 443, type: http, country:us US, tls: false, skip-cert-verify: false}
   - {name: 🎧 网易云音乐2, server: aimer.one, port: 3333, type: http, country:cn CN, tls: false, skip-cert-verify: false}
   - {name: 🎧 网易云音乐3, server: xbmmw.xyz, port: 1001, type: http, country:cn CN, tls: false, skip-cert-verify: false}
