@@ -132,6 +132,46 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 > rm -rf /usr/local/mysql
 > rm -f /etc/init.d/mysql
 
+### golang 交叉编译
+
+#### 1.Mac 下编译 Linux 和 Windows 64位可执行程序
+
+> CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build main.go
+> CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
+
+#### 2.Linux 下编译 Mac 和 Windows 64位可执行程序
+
+> CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build main.go
+> CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build main.go
+
+#### 3.Windows 下编译 Mac 和 Linux 64位可执行程序
+
+> SET CGO_ENABLED=0
+> SET GOOS=darwin
+> SET GOARCH=amd64
+> go build main.go
+>
+> SET CGO_ENABLED=0
+> SET GOOS=linux
+> SET GOARCH=amd64
+> go build main.go
+
 ### 减小 golang 编译出来的可执行文件大小
 
-> go build -i -ldflags="-s -w"
+> go build -ldflags="-s -w"
+
+### 萌咖的DD脚本
+
+确保安装了所需软件:（有必要 update & upgrade 一下）
+
+#### Debian/Ubuntu:
+
+> apt-get install -y xz-utils openssl gawk file
+
+#### RedHat/CentOS:
+
+> yum install -y xz openssl gawk file
+
+然后DD成Debian9：
+
+> bash <(wget --no-check-certificate -qO- 'http://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -p yourpassword
