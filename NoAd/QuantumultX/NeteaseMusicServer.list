@@ -1,19 +1,5 @@
 proxies:
-  - {name: 🎧 网易云音乐0, server: lolico.me, port: 443, type: http, country:us US, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐1, server: lolico.me, port: 443, type: http, country:us US, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐2, server: aimer.one, port: 3333, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐3, server: xbmmw.xyz, port: 1001, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐4, server: gx3dong.top, port: 8088, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐5, server: 106.52.127.72, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐6, server: music.lolico.me, port: 39000, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐7, server: music.griouges.cn, port: 39000, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐8, server: block4music.poetyin.me, port: 39000, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐9, server: blockmusic2.poetyin.me, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐10, server: xbmmw.xyz, port: 23333, type: ss, country:cn CN, cipher: aes-128-cfb, password: QQ3203434182}
-  - {name: 🎧 网易云音乐11, server: sdwan-a.getluffy.cloud, port: 11000, type: ss, country:cn CN, cipher: rc4-md5, password: b22Uqr}
-  - {name: 🎧 网易云音乐12, server: proxy.plusmedia.site, port: 58080, type: ss, country:us US, cipher: rc4-md5, password: T5ckndbLSXHQ}
-  - {name: 🎧 网易云音乐13, server: proxy.plusmedia.site, port: 58081, type: ss, country:us US, cipher: rc4-md5, password: T5ckndbLSXHQ}
-  - {name: 🎧 网易云音乐14, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: 🎧 网易云音乐15, server: music.desperadoj.com, port: 30003, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: 🎧 网易云音乐16, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_vrfn}
-  - {name: 🎧 网易云音乐17, server: blockmusic.poetyin.me, port: 30003, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_x80j}
+  - {name: 🎧 网易云音乐1, server: 106.52.127.72, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
+  - {name: 🎧 网易云音乐2, server: blockmusic2.poetyin.me, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
+  - {name: 🎧 网易云音乐3, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
+  - {name: 🎧 网易云音乐4, server: music.desperadoj.com, port: 30003, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
