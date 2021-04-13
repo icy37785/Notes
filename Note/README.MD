@@ -172,6 +172,7 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 
 > yum install -y xz openssl gawk file
 
-然后DD成Debian9：
+然后DD成Debian10：
 
-> bash <(wget --no-check-certificate -qO- 'http://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 9 -v 64 -a -p yourpassword
+> bash <(wget --no-check-certificate -qO- 'http://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 10 -v 64 -a -p yourpassword  --mirror 'https://mirrors.cloud.tencent.com/debian/'
+
