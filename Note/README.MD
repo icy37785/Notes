@@ -132,6 +132,25 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 > rm -rf /usr/local/mysql
 > rm -f /etc/init.d/mysql
 
+### docker 运行 PostgreSQL
+
+#### 1.拉取容器
+
+> docker pull postgres
+
+#### 2.启动容器
+
+```
+参数说明：
+-d：表示在后台启动容器；
+-p 5432:5432：容器内部的 5432 端口映射主机的 5432 端口；
+--name postgresql：将容器命名为 postgresql
+-v /home/user/pgdata:/var/lib/postgresql/data：挂载目录，其中 /home/user/pgdata 是宿主机的目录
+-e POSTGRES_PASSWORD=123：数据库 postgres 密码设置为 123
+```
+
+> docker run -d -p 5432:5432 --name=postgresql -v /home/user/pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=123 postgres
+
 ### golang 交叉编译
 
 #### 1.Mac 下编译 Linux 和 Windows 64位可执行程序

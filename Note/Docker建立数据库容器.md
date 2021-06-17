@@ -6,6 +6,8 @@
 
 拉取 postgresql 镜像: `docker pull postgres`
 
+也可以选用集成zhparser的版本 `docker pull abcfy2/zhparser`
+
 然后运行 postgresql
 
 > docker run -d -p 5432:5432 --name postgresql -v pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=pg123456 postgres
@@ -14,14 +16,18 @@
 
 1. POSTGRES_PASSWORD(数据库密码)
 2. POSTGRES_USER(数据库用户名,未指定则默认用户为`postgres`)
+3. POSTGRES_DB(数据库名)
 
-#### 数据存储位置
+####  参数说明
+```shell
+-d：表示在后台启动容器；
+-p 5432:5432：容器内部的 5432 端口映射主机的 5432 端口；
+--name postgresql：将容器命名为 postgresql
+-v /home/user/pgdata:/var/lib/postgresql/data：挂载目录，其中 /home/user/pgdata 是宿主机的目录
+-e POSTGRES_PASSWORD=123：数据库 postgres 密码设置为 123
+```
 
-1. 在本机创建一个文件夹, e.g. `/my/own/datadir`.
-
-2. postgres 像这样启动容器:
-
-   > docker run --name some-postgres -v / my / own / datadir：/ var / lib / postgresql / data -e POSTGRES_PASSWORD = mysecretpass
+> docker run -d -p 5432:5432 --name=postgresql -v /home/user/pgdata:/var/lib/postgresql/data -e POSTGRES_PASSWORD=123 postgres
 
 ### 安装 pgadmin4
 
