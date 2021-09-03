@@ -18,6 +18,8 @@
 }
 ```
 
+
+
 ### Zsh
 
 使用 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) 扩展。
@@ -39,3 +41,31 @@
 #### Windows 使用 MSYS2 中的 Git
 
 配置文件我已经打包到了 `MSYS2-cmd.zip` 文件夹中，解压后将目录增加到环境变量中即可
+
+
+
+### 使用om-my-zsh 的 autosuggestions  插件粘贴在终端很慢情况
+
+使用om-my-zsh 的 autosuggestions  插件
+
+导致 鼠标往 terminal 粘贴文字很慢，出现打字机效果的文字输入
+
+解决方案在 .zshrc 文件加入以下代码
+
+``` shell
+# 解决复制粘贴出现很慢情况
+pasteinit() {
+OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+ zle -N self-insert url-quote-magic
+}
+
+pastefinish() {
+ zle -N self-insert $OLD_SELF_INSERT
+}
+ 
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+```
+
+
+
