@@ -100,7 +100,7 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 
 1.在 https://github.com/docker/compose/releases 看最新的版本号并进行下载
 
-> curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+> curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 2.然后给 docker-compose 权限
 
