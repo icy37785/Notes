@@ -6,7 +6,7 @@
 
 拉取 postgresql 镜像: `docker pull postgres`
 
-也可以选用集成zhparser的版本 `docker pull abcfy2/zhparser:13-alpine`
+也可以选用集成zhparser的版本 `docker pull abcfy2/zhparser:14-alpine`
 
 然后运行 postgresql
 

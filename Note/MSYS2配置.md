@@ -30,7 +30,9 @@
 
 #### 插件
 
-- [Fast Syntax Highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions.git)
+
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting.git)
 
 ### 环境变量
 

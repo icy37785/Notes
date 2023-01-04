@@ -96,11 +96,15 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 
 > systemctl status docker
 
+06.把用户添加进 docker 组中
+
+> sudo gpasswd -a ${USER} docker
+
 ### 安装 docker-compose
 
 1.在 https://github.com/docker/compose/releases 看最新的版本号并进行下载
 
-> curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+> curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 2.然后给 docker-compose 权限
 
@@ -194,4 +198,79 @@ $(lsb_release -cs) 将返回 Debian 发行版的名称。在这个例子总，�
 然后DD成Debian10：
 
 > bash <(wget --no-check-certificate -qO- 'http://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 10 -v 64 -a -p yourpassword  --mirror 'https://mirrors.cloud.tencent.com/debian/'
+
+
+
+### VMware 挂载共享文件夹
+
+开机自动挂载
+
+修改/etc/fstab，加入如下内容
+
+> .host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
+
+手动挂载
+
+> vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+
+
+
+### Debian 设置 sudo
+
+进入 root 账户
+
+> su
+
+安装 sudo
+
+> apt install sudo
+
+把用户账号添加入账号组
+
+> usermod -ag sudo <username>
+
+或者
+
+> gpasswd -a <username> sudo
+
+也可以
+
+> 新建和用户名同名的文件
+>
+> nano /etc/sudoers.d/<username>
+>
+> 写入以下内容
+>
+> username ALL=(ALL)ALL
+
+### Debian 查看网卡信息
+
+> ip addres
+
+### Debian 编辑网卡信息
+
+> sudo nano /etc/network/interfaces
+
+写入
+
+> 1. auto ens33
+> 2. allow-hotplug ens33
+> 3. iface ens33 inet static
+> 4. address 192.168.1.1
+
+重启网卡
+
+> sudo systemctl restart networking.service
+
+
+
+### Debian 修改hostname
+
+> sudo nano /etc/hostname
+>
+> 或者
+>
+> sudo hostnamectl set-hostname <hostname>
+>
+> 重启生效
 

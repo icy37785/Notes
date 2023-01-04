@@ -44,3 +44,23 @@ $ git config [--global] user.email "[email address]"
 
 
 
+### git工作流
+
+```shell
+● git clone (master)
+● git checkout -b local
+● git add xxx
+● git commit -f "something change"
+● git push origin local
+● git checkout -b master
+● git pull origin master
+● git checkout -b local
+● git rebase master
+● git push -f origin local
+● create new pull request
+● squash and merge -- 所有改变合并成一个
+● github: delete local branch
+● git checkout -b master && git branch -d local
+● git pull origin master
+```
+
