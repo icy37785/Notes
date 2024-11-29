@@ -1,5 +1,0 @@
-proxies:
-  - {name: 🎧 网易云音乐1, server: 106.52.127.72, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐2, server: blockmusic2.poetyin.me, port: 19951, type: http, country:cn CN, tls: false, skip-cert-verify: false}
-  - {name: 🎧 网易云音乐3, server: music.desperadoj.com, port: 30001, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
-  - {name: 🎧 网易云音乐4, server: music.desperadoj.com, port: 30003, type: ss, country:cn CN, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
